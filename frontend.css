@@ -1,0 +1,179 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.body{
+  display: flex;
+  justify-content: center;
+}
+.b_index{
+  margin-top: 20%;
+}
+.create{
+  margin-top: 2%;
+}
+.h1{
+  color: black;
+}
+h1{
+  font-size: 24px;
+  color: white;
+}
+.index{
+  border: 1px solid #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title{
+  border-bottom: 1px solid #0c89f2;
+  background: #0c89f2;
+  padding: 10px 127px;
+  margin-bottom: 18px;
+}
+.section_div{
+  width: 469px;
+}
+.divs_form{
+  box-sizing: content-box;
+  margin-bottom: 9px;
+}
+
+.par{
+  background: #0C89F2;
+  padding: 8px;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  width: 40%;
+
+}
+
+.phone{
+  position: absolute;
+  padding: 8px 9px;
+}
+.font-aweson{
+  position: absolute;
+  background: #d4d4d4;
+  padding: 8px 9px;
+}
+.input-text{
+  padding: 8px 0px 6px 3px;
+  border: 1px solid #d4d4d4;
+  width: 42%;
+}
+.ingresar{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.buscar{
+  background: #1F6FEB;
+
+}
+.btn  {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+
+}
+.nuevo{
+  background: #049D4C;
+}
+.primary{
+  background: #1F6FEB;
+  margin-bottom: 15px;
+}
+
+.body_back_office{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+th{
+  border: 1px solid black;
+  padding: 10px;
+  background: #01DFED;
+}
+table{
+  border-collapse: collapse;
+}
+h2{
+  font-size: 15px;
+  padding: 0px 222px;
+}
+.panel{
+  background: #d4d4d4;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11px;
+  border: 1px solid #d4d4d4;
+}
+.menu p{
+  background: #0C89F2;
+  padding: 8px;
+  border-radius: 3px;
+  margin-right: 20px;
+  color: white;
+}
+
+.search{
+  border: 1px solid black;
+  border-radius: 17px;
+  height: 27px;
+  padding-left:  25px;
+}
+.icon{
+  position: relative;
+}
+
+.i_search{
+  position: absolute;
+  top: 5px;
+  left: 7px;
+}
+}
+.not{
+  color: red;
+}
+.limpiar{
+  background: #25a045;
+}
+.cancelar{
+  background: #ec4b0e;
+}
+.guardar{
+  background: #2cccc8;
+}
+.actions{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 9px;
+}
+.input-text-icon{
+  padding: 10px 0px 6px 36px;
+  border: 1px solid #d4d4d4;
+  width: 35%;
+}
+.checkbox{
+  font-size:10px;
+  display: inline-block;
+}
+.input-radio{
+  font-size:12 px;
+  display: inline-block;
+}
+.actions label{
+  margin-left: 19px;
+}

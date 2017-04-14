@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crear Persona</title>
+    <link rel="stylesheet" href="frontend.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <body class="body create">
+    <div class="index">
+      <div class="title">
+        <h1>Formulario de Registro de Persona</h1>
+      </div>
+      <div class="section_div">
+        <div class="divs_form">
+          <label for="name" class="par width-50">Nombre:</label>
+          <input class="input-text" type="text" id="name" class="width-50" placeholder="Nombre completo">
+        </div>
+        <div class="divs_form">
+          <label for="apellidos" class="par width-50">Apellidos</label>
+          <input class="input-text" type="text" name="" value="" id="apellidos"placeholder="Apellidos completos">
+        </div>
+        <div class="divs_form">
+          <label for="dni" class="par width-50">DNI</label>
+          <input  class="input-text" id="dni" type="text" name="" value="">
+        </div>
+        <div class="divs_form">
+          <label for="fecha-de-nacimiento" class="par width-50">Fecha de nacimiento</label>
+          <input  class="input-text" type="date" id="fecha-de-nacimiento"name="" value="" >
+        </div>
+        <div class="divs_form">
+          <label class="par">Genero:</label>
+          <div class="input-radio">
+            <label for="masculino" class="l_form">
+              <input type="radio" id="masculino" name="sexo" value="Masculino">Masculino
+            </label>
+            <label for="femenino" class="l_form">
+              <input type="radio" id="femenino" name="sexo" value="Femenino">Femenino
+            </label>
+          </div>
+        </div>
+        <div class="divs_form">
+          <label class="par width-50">Profesion:</label>
+          <select class="input-text" name="select">
+            <option value="Ing. sistemas">Seleccione</option>
+            <option value="Ing. sistemas">Ing. Sistemas</option>
+            <option value="Ing. sistemas">Ing. Civil</option>
+            <option value="Ing. sistemas">Ing. Ambiental</option>
+            <option value="Ing. sistemas">Enfermeria</option>
+            <option value="Ing. sistemas">Educacion</option>
+          </select>
+        </div>
+        <div class="divs_form">
+          <label class="par width-50" >Grado Estudio:</label>
+          <div class="checkbox">
+            <label for="bachiller" class="l_form">Bachiller
+              <input type="radio" id="bachiller" name="nivel" value="">
+            </label>
+            <label for="magister">Magister
+              <input type="radio" id="magister" name="nivel" value="">
+            </label>
+            <label for="doctorado">Doctorado
+              <input type="radio" id="doctorado"name="nivel" value="">
+            </label>
+          </div>
+        </div>
+        <div class="divs_form">
+          <label for="e-mail" class="par ">E-mail</label>
+          <label for="e-mail" class="l_form">
+            <i class="fa fa-envelope-o font-aweson"></i>
+            <input class="input-text-icon"id="e-mail" type="e-mail" name="" value="" placeholder="E-mail">
+          </label>
+        </div>
+        <div class="divs_form">
+          <label for="phone" class="par width-50">Telefono</label>
+          <label for="phone" class="l_form icon">
+            <i class="fa fa-phone phone"></i>
+            <input class="input-text-icon" id="phone"type="tel" name="" value="" placeholder="Phone">
+          </label>
+        </div>
+        <div class="divs_form">
+          <label for="usuario" class="par width-50">Usuario</label>
+          <input  id="usuario" class="input-text" type="text" name="" value="" placeholder="Username">
+        </div>
+        <div class="divs_form">
+          <label for="clave" class="par ">Clave</label>
+          <label for="clave" class="l_form icon">
+            <i class="fa fa-cog font-aweson"></i>
+            <input id="clave"class="input-text-icon"  type="password" name="" value="" placeholder="Password">
+          </label>
+        </div>
+        <div class="divs_form">
+          <label for="v-clave" class="par ">Volver a escribir clave</label>
+          <label for="v-clave" class="l_form icon">
+            <i class="fa fa-cog font-aweson"></i>
+            <input  id="clave" class="input-text-icon"  type="password" name="" value="" placeholder="Password">
+          </label>
+        </div>
+        <div class="actions">
+          <label for="">
+            <input  class="btn guardar" type="button" name="" value="Guardar">
+          </label>
+          <label for="">
+            <input class="btn cancelar" type="button" name="" value="Cancelar">
+          </label>
+          <label for="">
+            <input class="btn limpiar" type="button" name="" value="Limpiar">
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
