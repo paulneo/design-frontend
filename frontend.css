@@ -24,12 +24,14 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .title{
   border-bottom: 1px solid #0c89f2;
   background: #0c89f2;
-  padding: 10px 127px;
+  width: 100%;
+  text-align: center;
   margin-bottom: 18px;
 }
 .section_div{
@@ -67,6 +69,7 @@ h1{
 .ingresar{
   display: flex;
   flex-direction: row-reverse;
+  margin-right: 61px;
 }
 .buscar{
   background: #1F6FEB;
@@ -78,7 +81,15 @@ h1{
   color: white;
   padding: 10px;
   font-size: 15px;
-
+  cursor: pointer;
+}
+.btni{
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
 .nuevo{
   background: #049D4C;
@@ -97,6 +108,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 13px;
 }
 th{
   border: 1px solid black;
@@ -108,10 +120,12 @@ table{
 }
 h2{
   font-size: 15px;
-  padding: 0px 222px;
+  width: 100%;
+  text-align: center;
 }
 .panel{
   background: #d4d4d4;
+  width: 100%
 }
 section{
   display: flex;
@@ -120,7 +134,7 @@ section{
   margin-top: 11px;
   border: 1px solid #d4d4d4;
 }
-.menu p{
+.nombre{
   background: #0C89F2;
   padding: 8px;
   border-radius: 3px;
@@ -142,7 +156,7 @@ section{
   position: absolute;
   top: 5px;
   left: 7px;
-}
+
 }
 .not{
   color: red;
@@ -176,4 +190,98 @@ section{
 }
 .actions label{
   margin-left: 19px;
+}
+@media screen and (max-width:1118px){
+  .index{
+    width: 100%;
+  }
+}
+@media screen and (max-width:670px) {
+   .divs_form{
+     display: grid;
+     text-align: center;
+   }
+   .par{
+     text-align: center;
+     margin: 0 auto;
+
+   }
+   .primary{
+     padding: 10px 15px;
+   }
+   .ingresar label{
+     margin: 0 auto;
+     width: 43%;
+     display: grid;
+   }
+   .input-text{
+     margin: 0 auto;
+   }
+   .par{
+     height: 21px;
+   }
+   .actions{
+     display: grid;
+     text-align: center;
+   }
+   .actions label{
+     margin-bottom: 9px;
+     margin-left: 0px;
+   }
+   .btn{
+     padding: 10px 0px;
+     width: 43%;
+   }
+   .menu{
+     flex-direction: column;
+   }
+   .nombre{
+     margin-right: 0px;
+     width: 71%;
+     text-align: center;
+     margin-bottom: 5px;
+   }
+   .search{
+     width: 100%;
+     margin-bottom: 10px;
+   }
+   .l_buscar{
+     width: 178%;
+     text-align: center;
+     margin-bottom: 10px;
+    }
+    .l_nuevo{
+      width: 194%;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .nuevo{
+      padding: 10px 0px;
+      width: 40%;
+
+    }
+    .bucar{
+      padding: 10px 0px;
+      width: 64%;
+    }
+    section{
+      width: 90%%;
+      align-items: center;
+      margin: 10px auto;
+    }
+    .index{
+      width: 100%;
+    }
+    .ingresar{
+      margin-right: 0px;
+    }
+
+    .btni{
+      width: 100%;
+    }
+    .table{
+      overflow: scroll;
+      width: 250px;
+      height: 141px;
+    }
 }
