@@ -14,10 +14,10 @@ function ingresar(ev) {
 
 
 if (window.openDatabase){
-    var mydb =openDatabase("persona ", "0.1", "formulario base de datos", 8*1024*1024);
+    var mydb =openDatabase("persona ", "0.1", "formulario base de datos", 2*1024*1024);
 
     mydb.transaction(function (t) {
-      t.executeSql("CREATE TABLE IF NOT EXISTS persona(INTEGER PRIMARY KEY autoincrement, \n\
+      t.executeSql("CREATE TABLE IF NOT EXISTS persona(INTEGER PRIMARY KEY ASC, \n\
                   nombre text , apellidos text ,dni integer , nacimiento date, genero text,\n\
                    profesion text,email text , telefono integer, \n\
                   usuario text, clave text , validarclave text)");
@@ -49,13 +49,16 @@ function add() {
         t.executeSql("INSERT INTO persona(nombre,apellidos,dni,nacimiento,profesion, email,telefono,usuario,clave,validarclave) VALUES(?,?,?,?,?,?,?,?,?,?)",[nombre,apellidos,dni,nacimiento,profesion,email,telefono,usuario,clave,validarclave]);
          alert("funciona");
          outputCars();
-      });
+         window.location = "backoffice.html";
+         });
     }else {
       alert("Faltan espacios por llenar");
+
     }
   }else {
     alert("db no");
   }
+
 }
 function outputCars() {
     if (mydb) {
@@ -71,7 +74,10 @@ function updateCarList(transaction,results) {
     var listitems = "";
     var tabla = document.getElementById("table");
     var template = "";
-    tabla.innerHTML = "";
+    if (tabla) {
+      tabla.innerHTML = "";
+
+    }
 
     for (i = 0; i < results.rows.length; i++) {
       var row = results.rows.item(i);
@@ -84,7 +90,10 @@ function updateCarList(transaction,results) {
       template += "<td>"+ row.estado+" </td>";
       template +=  "<td><a class= 'editarfila'> E </a> <a onclick='deletepersona(" + row.id + ");' class= 'borrarfila'  >X</a> </td></tr>";
     }
-    tabla.innerHTML = template
+    if (tabla) {
+      tabla.innerHTML = template
+
+    }
 
 }
 outputCars();

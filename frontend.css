@@ -173,6 +173,7 @@ section{
 }
 .guardar{
   background: #2cccc8;
+  text-decoration: none;
 }
 .actions{
   display: flex;
@@ -189,7 +190,7 @@ section{
   display: inline-block;
 }
 .input-radio{
-  font-size:12 px;
+  font-size:12px;
   display: inline-block;
 }
 .actions label{
@@ -207,6 +208,9 @@ section{
   background: #EC3701;
   border-radius: 3px;
   cursor: pointer;
+}
+.button_guardar{
+  margin-top: 10px;
 }
 @media screen and (max-width:1118px){
   .index{
@@ -241,7 +245,7 @@ section{
      display: grid;
      text-align: center;
    }
-   .actions label{
+   .actions label  {
      margin-bottom: 9px;
      margin-left: 0px;
    }
