@@ -152,10 +152,10 @@ outputPeople();
 
 function deletepersona(id) {
     var mensaje = confirm("estas seguro");
-    if (mydb && mensaje) {
+    if (mydb ) {
       mydb.transaction(function (t) {
             t.executeSql("DELETE FROM persona WHERE id=?", [id], outputPeople);
-
+            alert("borro0");
 
         });
     } else {
