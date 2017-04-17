@@ -90,10 +90,16 @@ h1{
   padding: 10px;
   font-size: 15px;
   cursor: pointer;
+  text-decoration: none;
 }
 .nuevo{
   background: #049D4C;
+  text-decoration: none;
 }
+.estado{
+  margin-left: 22px;
+}
+
 .primary{
   background: #1F6FEB;
   margin-bottom: 15px;
@@ -170,6 +176,7 @@ section{
 }
 .cancelar{
   background: #ec4b0e;
+  text-decoration: none;
 }
 .guardar{
   background: #2cccc8;
@@ -202,6 +209,7 @@ section{
   margin-right: 11px;
   border-radius: 3px;
   cursor: pointer;
+  text-decoration: none;
 }
 .borrarfila{
   padding: 4px 11px;
@@ -209,7 +217,7 @@ section{
   border-radius: 3px;
   cursor: pointer;
 }
-.button_guardar{
+.etiqueta_a{
   margin-top: 10px;
 }
 @media screen and (max-width:1118px){
@@ -246,7 +254,7 @@ section{
      text-align: center;
    }
    .actions label  {
-     margin-bottom: 9px;
+     margin-bottom: 18px;
      margin-left: 0px;
    }
    .btn{
@@ -277,7 +285,7 @@ section{
       margin-bottom: 4px;
     }
     .nuevo{
-      padding: 10px 0px;
+      padding: 10px 74px;
       width: 40%;
 
     }
@@ -286,7 +294,7 @@ section{
       width: 64%;
     }
     section{
-      width: 90%%;
+      width: 90%;
       align-items: center;
       margin: 10px auto;
     }
@@ -304,5 +312,20 @@ section{
       overflow: scroll;
       width: 250px;
       height: 141px;
+    }
+    .cancelar{
+      padding: 10px 69px;
+    }
+    .guardar{
+      padding: 10px 71px;
+    }
+    .editarfila{
+
+      padding: 4px 5px;
+
+    }
+    .borrarfila{
+      padding: 4px 6px;
+
     }
 }
