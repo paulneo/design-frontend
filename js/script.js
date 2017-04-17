@@ -14,14 +14,14 @@ function ingresar(ev) {
 
 
 if (window.openDatabase){
-    var mydb =openDatabase("persona ", "0.1", "formulario base de datos", 2*1024*1024);
+    var mydb =openDatabase("asd ", "0.1", "formulario base de datos", 2*1024*1024);
 
     mydb.transaction(function (t) {
-      t.executeSql("CREATE TABLE IF NOT EXISTS persona(INTEGER PRIMARY KEY ASC, \n\
+      t.executeSql("CREATE TABLE IF NOT EXISTS asd(id integer primary key autoincrement,\n\
                   nombre text , apellidos text ,dni integer , nacimiento date, genero text,\n\
                   profesion text, estudios text , email text , telefono integer, \n\
                   usuario text, clave text , validarclave text)");
-                  alert("funcionas");
+
     });
 }
 else {
@@ -35,13 +35,12 @@ if (guardar) {
 if (search_btn) {
   search_btn.addEventListener("click",search);
 }
-
 function search(){
   if(mydb){
     var search_value = document.getElementById("search").value;
     if(search_value!=""){
       mydb.transaction(function(t){
-        t.executeSql('SELECT * FROM persona WHERE (nombre LIKE ? and dni LIKE ?)', ['%'+search_value+'%','%'+search_value+'%'], updatePersonList);
+        t.executeSql('SELECT * FROM asd WHERE (nombre LIKE ? or dni LIKE ?)', ['%'+search_value+'%','%'+search_value+'%'], updatePersonList);
       })
     }
     else {
@@ -81,7 +80,7 @@ function add() {
 
     if(nombre !== "" && apellidos !== "" && dni !== "" && nacimiento !== "" && genero !== "" &&profesion !== ""&& estudio!== "" && email !== "" && telefono !== "" && usuario !== "" && clave !== "" &&  validarclave !=="" && clave == validarclave){
       mydb.transaction(function(t){
-        t.executeSql("INSERT INTO persona(nombre,apellidos,dni,nacimiento,genero,profesion, estudios,email,telefono,usuario,clave,validarclave) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",[nombre,apellidos,dni,nacimiento,genero,profesion,estudio,email,telefono,usuario,clave,validarclave]);
+        t.executeSql("INSERT INTO asd(nombre,apellidos,dni,nacimiento,genero,profesion, estudios,email,telefono,usuario,clave,validarclave) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",[nombre,apellidos,dni,nacimiento,genero,profesion,estudio,email,telefono,usuario,clave,validarclave]);
          alert("funciona");
          outputPeople();
          window.location = "backoffice.html";
@@ -101,7 +100,7 @@ function add() {
 function outputPeople() {
     if (mydb) {
         mydb.transaction(function (t) {
-            t.executeSql("SELECT * FROM persona", [], updatePersonList );
+            t.executeSql("SELECT * FROM asd", [], updatePersonList );
         });
     } else {
         alert("db no encontrado");
@@ -111,7 +110,7 @@ var buscador = 1;
 
 function updatePersonList(transaction,results) {
     var tabla = document.getElementById("table");
-    var messsages = document.getElementById('messages');
+    var messages = document.getElementById('messages');
     var template = "";
     if (tabla) {
 
@@ -122,6 +121,7 @@ function updatePersonList(transaction,results) {
       for (i = 0; i < results.rows.length; i++) {
         var row = results.rows.item(i);
         buscador += i;
+        console.log("dato"+ row.id);
 
         template +="<tr><td>"+ row.id+" </td> ";
         template +=" <td>"+ row.nombre+" </td>";
@@ -133,16 +133,20 @@ function updatePersonList(transaction,results) {
       }
       if (tabla ) {
         tabla.innerHTML = template;
+        if (messages) {
+          messages.innerHTML = (results.rows.length) + " resultados";
 
-        messages.innerHTML = (results.rows.length) + " resultados";
+        }
       }
     }
     else {
       if (tabla ) {
 
         tabla.innerHTML = "";
+        if (messages) {
 
-        messages.innerHTML = "Ningun dato para mostrar";
+          messages.innerHTML = "Ningun dato para mostrar";
+        }
       }
     }
 
@@ -152,10 +156,11 @@ outputPeople();
 
 function deletepersona(id) {
     var mensaje = confirm("estas seguro");
-    if (mydb ) {
+    if (mydb && mensaje) {
       mydb.transaction(function (t) {
-            t.executeSql("DELETE FROM persona WHERE id=?", [id], outputPeople);
-            alert("borro0");
+        console.log(id);
+        t.executeSql("DELETE FROM asd WHERE rowid=?", [id], outputPeople);
+        alert("borro0");
 
         });
     } else {
